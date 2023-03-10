@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Victoria Aroworade">
+<meta name="dcterms.date" content="2023-03-03">
+
+<title>Meta-Data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="meta_data_files/libs/clipboard/clipboard.min.js"></script>
+<script src="meta_data_files/libs/quarto-html/quarto.js"></script>
+<script src="meta_data_files/libs/quarto-html/popper.min.js"></script>
+<script src="meta_data_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="meta_data_files/libs/quarto-html/anchor.min.js"></script>
+<link href="meta_data_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="meta_data_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="meta_data_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="meta_data_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="meta_data_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#load-packages" id="toc-load-packages" class="nav-link active" data-scroll-target="#load-packages">Load Packages</a></li>
+  <li><a href="#import-excel-file" id="toc-import-excel-file" class="nav-link" data-scroll-target="#import-excel-file">Import Excel File</a></li>
+  <li><a href="#get-sheet-names" id="toc-get-sheet-names" class="nav-link" data-scroll-target="#get-sheet-names">Get sheet names</a></li>
+  <li><a href="#create-a-vector-of-sheet-names" id="toc-create-a-vector-of-sheet-names" class="nav-link" data-scroll-target="#create-a-vector-of-sheet-names">Create a vector of sheet names</a></li>
+  <li><a href="#import-data-from-multiple-sheets-by-name" id="toc-import-data-from-multiple-sheets-by-name" class="nav-link" data-scroll-target="#import-data-from-multiple-sheets-by-name">Import data from multiple sheets by name</a></li>
+  <li><a href="#create-a-new-workbook" id="toc-create-a-new-workbook" class="nav-link" data-scroll-target="#create-a-new-workbook">Create a new workbook</a></li>
+  <li><a href="#add-the-data-frames-to-separate-tabs-in-workbook" id="toc-add-the-data-frames-to-separate-tabs-in-workbook" class="nav-link" data-scroll-target="#add-the-data-frames-to-separate-tabs-in-workbook">Add the data frames to separate tabs in workbook</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Meta-Data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Victoria Aroworade </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 3, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="load-packages" class="level2">
+<h2 class="anchored" data-anchor-id="load-packages">Load Packages</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="import-excel-file" class="level2">
+<h2 class="anchored" data-anchor-id="import-excel-file">Import Excel File</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>meta_excel_file <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="at">path =</span> <span class="st">"metadata/metadata_data/field_lists03mar2023.xlsx"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>meta_excel_file</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 134 × 7
+   `Field Label`            `API Name`     Type  Help …¹ Formula Attri…² Field…³
+   &lt;chr&gt;                    &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
+ 1 Abbreviation             Abbreviation_… Text… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 2 Acknowledgement language Acknowledgeme… Text… Input … &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 3 Actual grants made       Actual_grants… Pick… Has th… &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 4 Address                  BillingAddress Addr… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 5 Annual Revenue           AnnualRevenue  Curr… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;     &lt;NA&gt;  
+ 6 Average Grant Amount     Grant_Amounts… Mult… On ave… &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 7 Billing Geocode Accuracy BillingGeocod… Pick… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;     &lt;NA&gt;  
+ 8 Billing Latitude         BillingLatitu… Numb… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;     &lt;NA&gt;  
+ 9 Billing Longitude        BillingLongit… Numb… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;     &lt;NA&gt;  
+10 BOFC ACC Name            bofc__BOFC_AC… Form… &lt;NA&gt;    Name    &lt;NA&gt;     &lt;NA&gt;  
+# … with 124 more rows, and abbreviated variable names ¹​`Help Text`,
+#   ²​Attributes, ³​`Field Usage`</code></pre>
+</div>
+</div>
+</section>
+<section id="get-sheet-names" class="level2">
+<h2 class="anchored" data-anchor-id="get-sheet-names">Get sheet names</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">excel_sheets</span>(<span class="at">path =</span> <span class="st">"metadata/metadata_data/field_lists03mar2023.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] "Account"                        "analyticsengine__Setting__c"   
+  [3] "APXTConga4__Conga_Composer_Se"  "APXTConga4__Conga_Email_Stagi" 
+  [5] "APXTConga4__Conga_Email_Templ"  "APXTConga4__Conga_Merge_Query" 
+  [7] "APXTConga4__Conga_Template__c"  "Assay__c"                      
+  [9] "Assay_Instrument__c"            "Assay_Software__c"             
+ [11] "Assessment__c"                  "Assessment_Test_RecTypeId__c"  
+ [13] "Asset"                          "AssociatedLocation"            
+ [15] "bofc__BOFCAuditHistory__c"      "bofc__BOFCAuditHistoryItem__c" 
+ [17] "bofc__BOFCBulkLeadConversion_"  "bofc__BOFCCertificate__c"      
+ [19] "bofc__BOFCCompareExport__c"     "bofc__BOFCErrorLogs__c"        
+ [21] "bofc__BOFCFieldsAnalyzer__c"    "bofc__BOFCFieldsAnalyzerPickl" 
+ [23] "bofc__BOFCFieldsAnalyzerResul"  "bofc__BOFCLayoutMatrixChildOb" 
+ [25] "bofc__BOFCLayoutMatrixObject_"  "bofc__BOFCManageRecordType__c" 
+ [27] "bofc__BOFCOBDetails__c"         "bofc__BOFCOBFieldsDetails__c"  
+ [29] "bofc__BOFCObjectLimApex__c"     "bofc__BOFC_Object_Picklist__c" 
+ [31] "bofc__BOFCOtherthings__c"       "bofc__BOFC_Picklist_ValueSet_" 
+ [33] "bofc__BOFC_Picklist_ValueSet_1" "bofc__BOFC_Popup__c"           
+ [35] "bofc__BOFCProcessBuilders__c"   "bofc__BOFCProcessFlowAnalyser" 
+ [37] "bofc__BOFCProfileExtract__c"    "bofc__BOFCProfileFLSDetails__" 
+ [39] "bofc__BOFCReportResults__c"     "bofc__BOFCUserProfPerSet__c"   
+ [41] "bofc__BOFCVRules__c"            "Campaign"                      
+ [43] "CampaignMember"                 "Case"                          
+ [45] "Component__c"                   "Contact"                       
+ [47] "Contact_Account_Request__c"     "Contact_Role__c"               
+ [49] "ContentVersion"                 "Contract"                      
+ [51] "ContractContactRole"            "Contribution__c"               
+ [53] "cwbtool__AnalysisSummary__c"    "cwbtool__Apex_Code_Analysis__" 
+ [55] "cwbtool__Component__c"          "cwbtool__Connection__c"        
+ [57] "cwbtool__CWB_Setup__c"          "cwbtool__ErrorLog__c"          
+ [59] "cwbtool__FieldAnalysis__c"      "cwbtool__FieldTrack__c"        
+ [61] "cwbtool__MetadataDictionary__"  "cwbtool__ProfileComparison__c" 
+ [63] "cwbtool__Record_Process__c"     "cwbtool__UserFilterPreference" 
+ [65] "Data_Collection__c"             "Deliverable__c"                
+ [67] "Disbursement__c"                "Disease_Allocation__c"         
+ [69] "Disease__c"                     "Disease_Tagging_Link__c"       
+ [71] "dlrs__DeclarativeLookupRollup"  "dlrs__LookupChildAReallyReall" 
+ [73] "dlrs__LookupChild__c"           "dlrs__LookupParent__c"         
+ [75] "dlrs__LookupRollupCalculateJo"  "dlrs__LookupRollupSummary__c"  
+ [77] "dlrs__LookupRollupSummaryLog_"  "dlrs__LookupRollupSummarySche" 
+ [79] "Documentation__c"               "DragDropAttach__Configuration" 
+ [81] "dupcheck__dc3Duplicate__c"      "dupcheck__dc3Log__c"           
+ [83] "dupcheck__dcAnalytics__c"       "dupcheck__dcAudit__c"          
+ [85] "dupcheck__dcDelta__c"           "dupcheck__dcDiscard__c"        
+ [87] "dupcheck__dcFrequent__c"        "dupcheck__dcGroup__c"          
+ [89] "dupcheck__dcIndex__c"           "dupcheck__dcJob__c"            
+ [91] "dupcheck__dcLayout__c"          "dupcheck__dcQueue__c"          
+ [93] "dupcheck__dcTelemetry__c"       "dupcheck__dcTemp__c"           
+ [95] "dupcheck__dcTrigger__c"         "Event"                         
+ [97] "FIND_Biobank_Dashboard_Settin"  "Form_Builder__FormTitanPdfUrl" 
+ [99] "Form_Builder__Titan_Sign_Docu"  "Form_Builder__TItan_Sign_Trac" 
+[101] "Go_No_Go_Decision__c"           "Grant__c"                      
+[103] "Grant_Contact__c"               "Instrument__c"                 
+[105] "Instrument_Software__c"         "Interaction__c"                
+[107] "Lead"                           "Location"                      
+[109] "npe5__Affiliation__c"           "npe5__Affiliations_Settings__" 
+[111] "Opportunity"                    "OpportunityCompetitor"         
+[113] "OpportunityLineItem"            "Order"                         
+[115] "OrderItem"                      "Partner__c"                    
+[117] "Performance_Detail_Submission"  "Pricebook2"                    
+[119] "PricebookEntry"                 "Process_Component__c"          
+[121] "Process_Step__c"                "Product2"                      
+[123] "Project__c"                     "Related_Contact__c"            
+[125] "SFSSDupeCatcher__Application_"  "SFSSDupeCatcher__Application_2"
+[127] "SFSSDupeCatcher__DcIn__c"       "SFSSDupeCatcher__Duplicate_Wa" 
+[129] "SFSSDupeCatcher__Override_Cac"  "SFSSDupeCatcher__Potential_Du" 
+[131] "SFSSDupeCatcher__RequiredFiel"  "SFSSDupeCatcher__Scenario__c"  
+[133] "SFSSDupeCatcher__Scenario_Rul"  "SFSSDupeCatcher__Web_To_Lead_" 
+[135] "Software__c"                    "Solution"                      
+[137] "Stakeholder_Assessment__c"      "Submission__c"                 
+[139] "Submission_Sample_Detail__c"    "Tag_Settings__c"               
+[141] "Task"                           "Technology_Submission__c"      
+[143] "Test_Directory_Package__c"      "User"                          
+[145] "VisualAntidote__Alert__c"       "VisualAntidote__Alert_Templat" 
+[147] "VisualAntidote__Document__c"    "VisualAntidote__Event_Log__c"  
+[149] "VisualAntidote__FastFormsAuth"  "VisualAntidote__Fast_Forms_Da" 
+[151] "VisualAntidote__FastFormsSite"  "VisualAntidote__FastFormsToke" 
+[153] "VisualAntidote__Field_Integra"  "VisualAntidote__Form_Migratio" 
+[155] "VisualAntidote__Form_Page__c"   "VisualAntidote__Form_Rule__c"  
+[157] "VisualAntidote__Formstack_Use"  "VisualAntidote__Form_Style__c" 
+[159] "VisualAntidote__Form_Submissi"  "VisualAntidote__Payment_Accou" 
+[161] "VisualAntidote__Payment_Curre"  "VisualAntidote__Payment_Field" 
+[163] "VisualAntidote__Platform_Acco"  "VisualAntidote__Previous_Form" 
+[165] "VisualAntidote__Staging_Submi"  "VisualAntidote__Submission__c" 
+[167] "VisualAntidote__Submission_Dr"  "VisualAntidote__Web_Services_" 
+[169] "wbsendit__AutoSubscription__c"  "wbsendit__Campaign_Activity__" 
+[171] "wbsendit__Campaign_Monitor_Ca"  "wbsendit__Client__c"           
+[173] "wbsendit__Custom_Field__c"      "wbsendit__Journey__c"          
+[175] "wbsendit__Journey_Email__c"     "wbsendit__Queue_Item__c"       
+[177] "wbsendit__Smart_Email__c"       "wbsendit__Smart_Email_Recipie" 
+[179] "wbsendit__Smart_Email_Templat"  "wbsendit__Smart_Email_Variabl" 
+[181] "wbsendit__Subscriber_Import__"  "wbsendit__Subscriber_List__c"  
+[183] "wbsendit__Subscription__c"      "wbsendit__Suppression__c"      
+[185] "zaapit__View_Style__c"          "zaapit__zaapit_editable_table" 
+[187] "zaapit__zaapit_editable_tb__c"  "zaapit__ZaapIT_General_Settin" 
+[189] "zaapit__ZaapIT_Global_Setting"  "zaapit__ZaapIT_Related_List_T" 
+[191] "zaapit__ZaapIT_Table_user_con" </code></pre>
+</div>
+</div>
+</section>
+<section id="create-a-vector-of-sheet-names" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-vector-of-sheet-names">Create a vector of sheet names</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sheet_names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Account"</span>, <span class="st">"Assay__c"</span>, <span class="st">"Instrument__c"</span>, <span class="st">"Software__c"</span>, <span class="st">"Technology_Submission__c"</span>, <span class="st">"Performance_Detail_Submission"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="import-data-from-multiple-sheets-by-name" class="level2">
+<h2 class="anchored" data-anchor-id="import-data-from-multiple-sheets-by-name">Import data from multiple sheets by name</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data_by_names <span class="ot">&lt;-</span> <span class="fu">lapply</span>(sheet_names, <span class="cf">function</span>(x)<span class="fu">read_excel</span>(<span class="at">path =</span> <span class="st">"metadata/metadata_data/field_lists03mar2023.xlsx"</span>, <span class="at">sheet =</span> x))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data_by_names</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+# A tibble: 134 × 7
+   `Field Label`            `API Name`     Type  Help …¹ Formula Attri…² Field…³
+   &lt;chr&gt;                    &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
+ 1 Abbreviation             Abbreviation_… Text… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 2 Acknowledgement language Acknowledgeme… Text… Input … &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 3 Actual grants made       Actual_grants… Pick… Has th… &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 4 Address                  BillingAddress Addr… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 5 Annual Revenue           AnnualRevenue  Curr… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;     &lt;NA&gt;  
+ 6 Average Grant Amount     Grant_Amounts… Mult… On ave… &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 7 Billing Geocode Accuracy BillingGeocod… Pick… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;     &lt;NA&gt;  
+ 8 Billing Latitude         BillingLatitu… Numb… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;     &lt;NA&gt;  
+ 9 Billing Longitude        BillingLongit… Numb… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;     &lt;NA&gt;  
+10 BOFC ACC Name            bofc__BOFC_AC… Form… &lt;NA&gt;    Name    &lt;NA&gt;     &lt;NA&gt;  
+# … with 124 more rows, and abbreviated variable names ¹​`Help Text`,
+#   ²​Attributes, ³​`Field Usage`
+
+[[2]]
+# A tibble: 120 × 7
+   `Field Label`                   API N…¹ Type  Help …² Formula Attri…³ Field…⁴
+   &lt;chr&gt;                           &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;chr&gt;   &lt;chr&gt;  
+ 1 Antibody Target                 Antibo… Mult… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 2 Antibody Target (del)           Antibo… Mult… &lt;NA&gt;    NA      &lt;NA&gt;     &lt;NA&gt;  
+ 3 Antibody vs Aptamer-based dete… Antibo… Pick… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 4 Antimicrobial Resistance Class  Antimi… Mult… Antimi… NA      &lt;NA&gt;    "Page …
+ 5 Assay Aim                       Assay_… Pick… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 6 Assay Name                      Name    Text… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 7 Assay Target                    Assay_… Mult… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 8 Assay Target (ToBeDeleted)      Assay_… Pick… &lt;NA&gt;    NA      &lt;NA&gt;     &lt;NA&gt;  
+ 9 AST Output                      AST_Ou… Mult… Follow… NA      &lt;NA&gt;    "Page …
+10 Business Intelligence Contact … Busine… Pick… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+# … with 110 more rows, and abbreviated variable names ¹​`API Name`,
+#   ²​`Help Text`, ³​Attributes, ⁴​`Field Usage`
+
+[[3]]
+# A tibble: 75 × 7
+   `Field Label`                   API N…¹ Type  Help …² Formula Attri…³ Field…⁴
+   &lt;chr&gt;                           &lt;chr&gt;   &lt;chr&gt; &lt;lgl&gt;   &lt;lgl&gt;   &lt;chr&gt;   &lt;chr&gt;  
+ 1 Additional Operating Conditions Additi… Text… NA      NA      &lt;NA&gt;    "Page …
+ 2 Assay Aim                       Assay_… Pick… NA      NA      &lt;NA&gt;    "Page …
+ 3 Assay Target                    Assay_… Mult… NA      NA      &lt;NA&gt;    "Page …
+ 4 AST Output                      AST_Ou… Mult… NA      NA      &lt;NA&gt;    "Page …
+ 5 Business Intelligence Contact … Busine… Pick… NA      NA      &lt;NA&gt;    "Page …
+ 6 COGS(instrument)                COGS_i… Numb… NA      NA      &lt;NA&gt;    "Page …
+ 7 Comments                        Commen… Text… NA      NA      &lt;NA&gt;    "Page …
+ 8 Companion solutions             Compan… Pick… NA      NA      &lt;NA&gt;    "Page …
+ 9 Company/Institution Name        Compan… Look… NA      NA      Requir… "Page …
+10 Connectivity options            Connec… Pick… NA      NA      &lt;NA&gt;    "Page …
+# … with 65 more rows, and abbreviated variable names ¹​`API Name`,
+#   ²​`Help Text`, ³​Attributes, ⁴​`Field Usage`
+
+[[4]]
+# A tibble: 56 × 7
+   `Field Label`                   API N…¹ Type  Help …² Formula Attri…³ Field…⁴
+   &lt;chr&gt;                           &lt;chr&gt;   &lt;chr&gt; &lt;lgl&gt;   &lt;lgl&gt;   &lt;chr&gt;   &lt;chr&gt;  
+ 1 Antimicrobial Resistance Class  Antimi… Mult… NA      NA      &lt;NA&gt;    "Page …
+ 2 Assay Aim                       Assay_… Pick… NA      NA      &lt;NA&gt;    "Page …
+ 3 Business Intelligence Contact … Busine… Pick… NA      NA      &lt;NA&gt;    "Page …
+ 4 Comments                        Commen… Text… NA      NA      &lt;NA&gt;    "Page …
+ 5 Companion solutions             Compan… Pick… NA      NA      &lt;NA&gt;    "Page …
+ 6 Company/Institution Name        Compan… Look… NA      NA      Requir… "Page …
+ 7 Created By ID                   Create… Look… NA      NA      Requir… "Page …
+ 8 Created Date                    Create… Date… NA      NA      Requir…  &lt;NA&gt;  
+ 9 Data format                     Data_f… Pick… NA      NA      &lt;NA&gt;    "Page …
+10 Deleted                         IsDele… Chec… NA      NA      Requir…  &lt;NA&gt;  
+# … with 46 more rows, and abbreviated variable names ¹​`API Name`,
+#   ²​`Help Text`, ³​Attributes, ⁴​`Field Usage`
+
+[[5]]
+# A tibble: 147 × 7
+   `Field Label`                   API N…¹ Type  Help …² Formula Attri…³ Field…⁴
+   &lt;chr&gt;                           &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
+ 1 Additional Operating Conditions Additi… Text… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 2 Antibody Target                 Antibo… Mult… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 3 Antibody vs Aptamer-based dete… Antibo… Pick… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 4 Antimicrobial Resistance Class  Antimi… Mult… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 5 Assay Aim                       Assay_… Pick… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 6 Assay Target                    Assay_… Mult… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 7 Assay Target (del)              Assay_… Pick… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;     &lt;NA&gt;  
+ 8 AST Output                      AST_Ou… Mult… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+ 9 Business Intelligence Contact … Busine… Pick… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+10 COGS(instrument)                COGS_i… Numb… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    "Page …
+# … with 137 more rows, and abbreviated variable names ¹​`API Name`,
+#   ²​`Help Text`, ³​Attributes, ⁴​`Field Usage`
+
+[[6]]
+# A tibble: 106 × 7
+   `Field Label`                   API N…¹ Type  Help …² Formula Attri…³ Field…⁴
+   &lt;chr&gt;                           &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;chr&gt;   &lt;chr&gt;  
+ 1 95% CI for Clinical Sensitivit… X95_CI… Perc… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 2 95% CI for Clinical Sensitivit… X95_CI… Perc… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 3 95% CI for Clinical Specificit… X95_CI… Perc… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 4 95% CI for Clinical Specificit… X95_CI… Perc… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 5 Age                             Age__c  Mult… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 6 Analytical sensitivity/LOD      Analyt… Numb… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 7 Analytical sensitivity/LOD unit Analyt… Pick… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 8 Antibody Target                 Antibo… Mult… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+ 9 Articles in Review              Articl… Numb… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+10 Assay                           Assay_… Look… &lt;NA&gt;    NA      &lt;NA&gt;    "Page …
+# … with 96 more rows, and abbreviated variable names ¹​`API Name`,
+#   ²​`Help Text`, ³​Attributes, ⁴​`Field Usage`</code></pre>
+</div>
+</div>
+</section>
+<section id="create-a-new-workbook" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-new-workbook">Create a new workbook</h2>
+</section>
+<section id="add-the-data-frames-to-separate-tabs-in-workbook" class="level2">
+<h2 class="anchored" data-anchor-id="add-the-data-frames-to-separate-tabs-in-workbook">Add the data frames to separate tabs in workbook</h2>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
